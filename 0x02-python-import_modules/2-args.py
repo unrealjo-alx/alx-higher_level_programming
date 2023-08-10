@@ -9,4 +9,4 @@ if __name__ == "__main__":
         print("{} arguments:".format(num_args))
         # Skip the first arg (name of the file)
     for index, arg in enumerate(argv[1:], 1):
-        print("{:d} : {}".format(index, arg))
+        print("{:d}: {}".format(index, arg))
