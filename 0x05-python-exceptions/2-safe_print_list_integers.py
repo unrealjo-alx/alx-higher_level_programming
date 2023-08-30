@@ -2,7 +2,10 @@
 
 
 def safe_print_list_integers(my_list=[], x=0):
-    """A function that prints the first x elements of a list and only integers."""
+    """
+    A function that prints the first x
+    elements of a list and only integers.
+    """
     count = 0
     try:
         for idx in range(x):
