@@ -113,9 +113,9 @@ class Rectangle:
             return rep
 
         while i < self.__height - 1:
-            rep += Rectangle.print_symbol * self.__width + "\n"
+            rep += str(Rectangle.print_symbol) * self.__width + "\n"
             i += 1
-        rep += Rectangle.print_symbol * self.__width
+        rep += str(Rectangle.print_symbol) * self.__width
 
         return rep
 
