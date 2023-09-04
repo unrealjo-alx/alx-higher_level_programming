@@ -101,14 +101,14 @@ class Rectangle:
     def __str__(self):
         """
         Returns:
-            string: Representation of the rectangle.
+            string: Representation of the rectangle using #.
         """
         rep = ""
         i = 0
         if self.__width == 0 or self.__height == 0:
             return rep
 
-        while i < self.__height:
+        while i < self.__height - 1:
             rep += "#" * self.__width + "\n"
             i += 1
         rep += "#" * self.__width
