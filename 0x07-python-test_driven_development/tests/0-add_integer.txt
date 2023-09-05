@@ -1,0 +1,22 @@
+# 0-add_integer.txt
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+check for two integers
+>>> add_integer(6, 8)
+14
+
+check for two floats
+>>> add_integer(6.5, 8.1)
+14
+
+check for one integer value
+>>> add_integer(6)
+104
+
+check against a string value
+>>> add_integer("Hi")
+Traceback (most recent call last):
+	...
+    raise TypeError("a must be an integer")
+TypeError: a must be an integer
