@@ -20,3 +20,15 @@ Traceback (most recent call last):
 	...
     raise TypeError("a must be an integer")
 TypeError: a must be an integer
+
+check against a Float overflow
+>>> add_integer(5, float("inf"))
+Traceback (most recent call last):
+        ...
+OverflowError: cannot convert float infinity to integer
+
+check for NaN value
+>>> add_integer(float("NaN"), 6)
+Traceback (most recent call last):
+	...
+ValueError: cannot convert float NaN to integer
