@@ -1,0 +1,33 @@
+>>> print_square = __import__('4-print_square').print_square
+
+check normal case
+>>> print_square(2)
+##
+##
+
+check type of size
+>>> print_square("deer")
+Traceback (most recent call last):
+        ...
+TypeError: size must be an integer
+
+Check if size is float and less than 0
+>>> print_square(-0.8)
+Traceback (most recent call last):
+        ...
+TypeError: size must be an integer
+
+check if size is 0
+>>> print_square(0)
+
+check when no value is passed
+>>> print_square()
+Traceback (most recent call last):
+        ...
+TypeError: print_square() missing 1 required positional argument: 'size'
+
+Check if size is negative
+>>> print_square(-1)
+Traceback (most recent call last):
+        ...
+ValueError: size must be >= 0
