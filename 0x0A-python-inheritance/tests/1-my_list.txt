@@ -1,0 +1,23 @@
+# my_list_tests.txt - Interactive tests for the MyList class.
+
+# Import the MyList class
+>>> MyList = __import__('1-my_list').MyList
+
+>>> my_list = MyList()
+>>> my_list.print_sorted()
+[]
+
+# Create an instance of MyList with numeric values
+>>> my_list = MyList([5, 2, 8, 1, 9])
+>>> my_list.print_sorted()
+[1, 2, 5, 8, 9]
+
+# Create an instance of MyList with string values
+>>> my_list = MyList(["apple", "banana", "cherry", "date"])
+>>> my_list.print_sorted()
+['apple', 'banana', 'cherry', 'date']
+
+# Create an instance of MyList with duplicate values
+>>> my_list = MyList([3, 1, 2, 3, 2])
+>>> my_list.print_sorted()
+[1, 2, 2, 3, 3]
