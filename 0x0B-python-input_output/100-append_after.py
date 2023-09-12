@@ -12,14 +12,11 @@ def append_after(filename="", search_string="", new_string=""):
         search_string (str): The string to search for.
         new_string (str): The string to be inserted.
     """
-    lines = []
-
     with open(filename, "r", encoding="utf-8") as r_file:
         lines = r_file.readlines()
-        for line in lines:
-            index = line.find(search_string)
-            if index != -1:
-                lines.insert(index, new_string)
+        for index, line in enumerate(lines):
+            if search_string in line:
+                lines.insert(index + 1, new_string)
 
     with open(filename, "w", encoding="utf-8") as w_file:
         w_file.writelines(lines)
