@@ -105,8 +105,8 @@ class Rectangle(Base):
         coordinates = f"{self._x}/{self._y}"
         return f"[Rectangle] ({self.id}) {coordinates} - {dimensions}"
 
-    def update(self, *args):
-        """Assign arguments to each attribute: id, width, height, x, y."""
+    def update(self, *args, **kwargs):
+        """Assign key/value arguments to attributes."""
         if len(args) > 0:
             self.id = args[0]
         if len(args) > 1:
@@ -117,3 +117,5 @@ class Rectangle(Base):
             self.x = args[3]
         if len(args) > 4:
             self.y = args[4]
+        for key, value in kwargs.items():
+            setattr(self, key, value)
