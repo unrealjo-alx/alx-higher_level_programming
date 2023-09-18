@@ -4,8 +4,6 @@ base: A module providing the Base class to manage id attribute.
 """
 import os
 import json
-from models.rectangle import Rectangle
-from models.square import Square
 
 if not os.path.exists("models"):
     os.makedirs("models")
@@ -61,10 +59,11 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """Returns an instance with all attributes already set."""
-        mod = cls
         if cls.__name__ == "Rectangle":
-            mod = Rectangle(2, 7)
+            dummy = cls(1, 1)
         elif cls.__name__ == "Square":
-            mod = Square(6)
-        mod.update(**dictionary)
-        return mod
+            dummy = cls(1)
+        else:
+            dummy = cls()
+        dummy.update(**dictionary)
+        return dummy
