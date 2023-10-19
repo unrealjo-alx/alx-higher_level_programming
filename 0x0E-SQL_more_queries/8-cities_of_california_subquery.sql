@@ -2,7 +2,7 @@
 
 SELECT cities.id, cities.name
 FROM cities, states
-WHERE cities.state_id = (
+WHERE cities.state_id IN (
         SELECT id
         FROM states
         WHERE
