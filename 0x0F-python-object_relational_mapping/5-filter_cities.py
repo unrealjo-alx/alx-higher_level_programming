@@ -37,12 +37,7 @@ if __name__ == "__main__":
     cursor.execute(query, (state_name,))
     result = cursor.fetchall()
 
-    len_result = len(result)
-    for i in range(len_result):
-        if i < len_result - 1:
-            print(result[i][0], end=", ")
-        else:
-            print(result[i][0])
+    print(", ".join([row[0] for row in result]))
 
     cursor.close()
     db.close()
