@@ -11,6 +11,8 @@ if __name__ == "__main__":
     """
     Main entry point of the script.
     """
+    if len(sys.argv) < 5:
+        sys.exit(0)
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
